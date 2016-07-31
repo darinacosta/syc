@@ -11,7 +11,6 @@ body {
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
 .marketing,
 .footer {
   padding-left: 15px;
@@ -21,7 +20,6 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -67,29 +65,6 @@ body {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
 /*
   DJA CUSTOM
 */
@@ -117,4 +92,47 @@ body {
 ul#sycbuttons li {
     display:inline;
     padding: 15px;
+}
+
+ul#sycbuttons li.desktop {
+  display: none;
+}
+
+ul#sycbuttons li.mobile {
+  display: inline;
+}
+
+.desktop {
+  display: none;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    /*max-width: 730px;*/
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  ul#sycbuttons li.mobile {
+    display: none;
+  }
+
+  ul#sycbuttons li.desktop {
+    display: inline;
+  }
+
+  .desktop {
+    display: inline;
+  }
 }
